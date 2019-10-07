@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  myfrontend:
+    container_name: 'myfrontend'
+    build:
+      context: ./
+    image: myfrontend:1.0
+    volumes:
+      - ./:/var/www/myfrontend:cached
+    ports:
+      - '3000:3000'
